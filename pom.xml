@@ -12,38 +12,30 @@
 
 	<dependencies>
 
-		<!-- Logging helper -->
+		<!-- Helper to configure the logging framework -->
 		<dependency>
 			<groupId>de.uniluebeck.itm.util</groupId>
 			<artifactId>logging</artifactId>
 			<version>0.8</version>
 		</dependency>
 
-		<!-- Logging -->
+		<!-- Logging with slf4j and log4j -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.7.5</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jul-to-slf4j</artifactId>
-			<version>1.7.7</version>
-		</dependency>
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
+			<version>1.7.12</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.7</version>
+			<version>1.7.12</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>
 		<plugins>
+
 			<!-- Java compiler source code version -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -54,7 +46,7 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-			
+
 			<!-- Simple execution from the command line using 'mvn exec:java' -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -73,7 +65,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 	<repositories>
 		<!-- For ITM util logging -->
