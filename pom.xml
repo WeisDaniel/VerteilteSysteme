@@ -18,7 +18,7 @@
 			<artifactId>logging</artifactId>
 			<version>0.8</version>
 		</dependency>
-		
+
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -54,7 +54,23 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-
+			
+			<!-- Simple execution from the command line using 'mvn exec:java' -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>de.dhbw.vs.examples.Main</mainClass>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
